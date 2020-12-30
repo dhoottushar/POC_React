@@ -254,6 +254,53 @@ const tdArray = [
   ["6", "Mason Porter", "$78,615", "Chile", "Gloucester"]
 ];
 
+const data1 = [
+  {'ID': "1", "Name": "Dakota Rice", "Salary": "$36,738", "Country": "Niger", "City": "Oud-Turnhout"},
+  {'ID': "2", "Name": "Minerva Hooper", "Salary": "$23,789", "Country": "Curaçao", "City": "Sinaai-Waas"},
+  {'ID': "3", "Name": "Sage Rodriguez", "Salary": "$56,142", "Country": "Netherlands", "City": "Baileux"},
+  {'ID': "4", "Name": "Philip Chaney", "Salary": "$38,735", "Country": "Korea", "City": "Overland Park"},
+  {'ID': "5", "Name": "Doris Greene", "Salary": "$63,542", "Country": "Malawi", "City": "Feldkirchen in Kärnten"},
+  {'ID': "6", "Name": "Mason Porter", "Salary": "$78,615", "Country": "Chile", "City": "Gloucester"}
+];
+
+const data2 = [
+  {'ID': "1", "Name": "Dakota Rice", "Salary": "$36,738", "Country": "Niger", "City": "Oud-Turnhout"},
+  {'ID': "2", "Name": "Minerva Hooper", "Salary": "$23,789", "Country": "Curaçao", "City": "Sinaai-Waas"},
+  {'ID': "3", "Name": "Sage Rodriguez", "Salary": "$56,142", "Country": "Netherlands", "City": "Baileux"},
+  {'ID': "4", "Name": "Philip Chaney", "Salary": "$38,735", "Country": "Korea", "City": "Overland Park"},
+  {'ID': "5", "Name": "Doris Greene", "Salary": "$63,542", "Country": "Malawi", "City": "Feldkirchen in Kärnten"},
+  {'ID': "6", "Name": "Mason Porter", "Salary": "$78,615", "Country": "Chile", "City": "Gloucester"},
+  {'ID': "7", "Name": "Dakota Rice", "Salary": "$36,738", "Country": "Niger", "City": "Oud-Turnhout"},
+  {'ID': "8", "Name": "Minerva Hooper", "Salary": "$23,789", "Country": "Curaçao", "City": "Sinaai-Waas"},
+  {'ID': "9", "Name": "Sage Rodriguez", "Salary": "$56,142", "Country": "Netherlands", "City": "Baileux"},
+  {'ID': "10", "Name": "Philip Chaney", "Salary": "$38,735", "Country": "Korea", "City": "Overland Park"},
+  {'ID': "11", "Name": "Doris Greene", "Salary": "$63,542", "Country": "Malawi", "City": "Feldkirchen in Kärnten"},
+  {'ID': "12", "Name": "Mason Porter", "Salary": "$78,615", "Country": "Chile", "City": "Gloucester"}
+];
+
+const columns = [
+  {
+    Header: 'ID',
+    accessor: 'ID',
+  },
+  {
+    Header: 'Name',
+    accessor: 'Name',
+  },
+  {
+    Header: 'Salary',
+    accessor: 'Salary',
+  },
+  {
+    Header: 'Country',
+    accessor: 'Country',
+  },
+  {
+    Header: 'City',
+    accessor: 'City',
+  }
+]
+
 //
 // //
 // // // For icons
@@ -980,4 +1027,7 @@ module.exports = {
     chartExample2, 
     chartExample3, 
     chartExample4, 
+    columns,
+    data1,
+    data2
 };

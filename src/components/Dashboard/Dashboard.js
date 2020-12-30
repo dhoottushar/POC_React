@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-// import ChartistGraph from "react-chartist";
 import { Container, Row, Col } from "react-bootstrap";
 import { Line, Bar } from "react-chartjs-2";
 import { Card } from "../Card";
-// import { StatsCard } from "components/StatsCard/StatsCard.jsx";
-// import { Tasks } from "components/Tasks/Tasks.jsx";
+import styled from 'styled-components';
+import Table from "../Table";
 import {
     dataPie,
     legendPie,
@@ -21,9 +18,51 @@ import {
     chartExample1,
     chartExample2,
     chartExample3,
+    columns,
+    data1,
+    data2
 } from "../data";
 
+const Styles = styled.div`
+  padding: 1rem;
+
+  table {
+    border-spacing: 0;
+    border: 1px solid black;
+
+    tr {
+      :last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    th,
+    td {
+      margin: 0;
+      padding: 0.5rem;
+      border-bottom: 1px solid black;
+      border-right: 1px solid black;
+
+      :last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  .pagination {
+    padding: 0.5rem;
+  }
+`
+
 class Dashboard extends Component {
+
+
+    
+
+
+
     createLegend(json) {
         var legend = [];
         for (var i = 0; i < json["names"].length; i++) {
@@ -106,25 +145,22 @@ class Dashboard extends Component {
 
                     <Row className="row-margin">
                         <Col md={4}>
-                            <Card
-                                id="chartActivity"
-                                title="2014 Sales"
-                                category="All products including Taxes"
-                                stats="Data information certified"
-                                statsIcon="fa fa-check"
-                                content={
-                                    <div className="ct-chart">
-                                        
-                                    </div>
-                                }
-                                legend={
-                                    <div className="legend">{this.createLegend(legendBar)}</div>
-                                }
-                            />
+                        <Card
+                                            title="Tasks"
+                                            category="Backend development"
+                                            stats="Updated 3 minutes ago"
+                                            statsIcon="fa fa-history"
+                                            content={
+                                                <div className="table-full-width">
+                                                    <Styles>
+          <Table columns={columns} data={data2} />
+        </Styles>
+                                                </div>
+                                            }
+                                        />
                         </Col>
 
                         <Col md={8}>
-
                             <Container fluid>
                                 <Row className="row-margin">
                                     <Col md={6}>
@@ -135,9 +171,9 @@ class Dashboard extends Component {
                                             statsIcon="fa fa-history"
                                             content={
                                                 <div className="table-full-width">
-                                                    <table className="table">
-                                                        {/* <Tasks /> */}
-                                                    </table>
+                                                    <Styles>
+          <Table columns={columns} data={data1} />
+        </Styles>
                                                 </div>
                                             }
                                         />
@@ -150,9 +186,9 @@ class Dashboard extends Component {
                                             statsIcon="fa fa-history"
                                             content={
                                                 <div className="table-full-width">
-                                                    <table className="table">
-                                                        {/* <Tasks /> */}
-                                                    </table>
+                                                    <Styles>
+          <Table columns={columns} data={data1} />
+        </Styles>
                                                 </div>
                                             }
                                         />
@@ -167,9 +203,9 @@ class Dashboard extends Component {
                                             statsIcon="fa fa-history"
                                             content={
                                                 <div className="table-full-width">
-                                                    <table className="table">
-                                                        {/* <Tasks /> */}
-                                                    </table>
+                                                    <Styles>
+          <Table columns={columns} data={data1} />
+        </Styles>
                                                 </div>
                                             }
                                         />
@@ -182,9 +218,12 @@ class Dashboard extends Component {
                                             statsIcon="fa fa-history"
                                             content={
                                                 <div className="table-full-width">
-                                                    <table className="table">
+                                                    {/* <table className="table"> */}
                                                         {/* <Tasks /> */}
-                                                    </table>
+                                                        <Styles>
+          <Table columns={columns} data={data1} />
+        </Styles>
+                                                    {/* </table> */}
                                                 </div>
                                             }
                                         />
