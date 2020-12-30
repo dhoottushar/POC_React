@@ -25,3 +25,15 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.mt-70{
+  margin-top: 70px;
+}
+
+.home-buttons{
+  height: 200px;
+  margin: 20% auto;
+}
+.dropdown-menu{
+  right: 0;
+  left: auto;
+}
